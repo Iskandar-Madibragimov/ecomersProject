@@ -7,6 +7,8 @@ import Blog from "../blog"
 import Shop from "../shop"
 import Contact from "../contactUs"
 import { MainPageWrapper } from './styles'
+import { DealsWrapper } from '../../components/deals/style'
+import Deals from '../../components/deals'
 
 function MainPage() {
   return (
@@ -29,7 +31,7 @@ function MainPage() {
       </ul>
 
       <MainPageWrapper>
-
+        <Deals />
       </MainPageWrapper>
 
       <Routes>
