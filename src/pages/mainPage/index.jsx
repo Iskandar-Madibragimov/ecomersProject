@@ -10,6 +10,7 @@ import { MainPageWrapper } from './styles'
 import { DealsWrapper } from '../../components/deals/style'
 import Deals from '../../components/deals'
 import Newsletter from '../../components/newsletter'
+import Offers from '../../components/offers'
 
 function MainPage() {
   return (
@@ -32,6 +33,7 @@ function MainPage() {
       </ul>
 
       <MainPageWrapper>
+        <Offers />
         <Deals />
         <Newsletter />
       </MainPageWrapper>
