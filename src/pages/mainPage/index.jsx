@@ -9,6 +9,7 @@ import Contact from "../contactUs"
 import { MainPageWrapper } from './styles'
 import { DealsWrapper } from '../../components/deals/style'
 import Deals from '../../components/deals'
+import Newsletter from '../../components/newsletter'
 
 function MainPage() {
   return (
@@ -32,6 +33,7 @@ function MainPage() {
 
       <MainPageWrapper>
         <Deals />
+        <Newsletter />
       </MainPageWrapper>
 
       <Routes>
