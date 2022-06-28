@@ -6,10 +6,12 @@ import Home from "../home"
 import Blog from "../blog"
 import Shop from "../shop"
 import Contact from "../contactUs"
+import { MainPageWrapper } from './styles'
 
 function MainPage() {
   return (
     <div>
+    <Navbar />
 
       <ul>
         <li>
@@ -26,7 +28,10 @@ function MainPage() {
         </li>
       </ul>
 
-    <Navbar />
+      <MainPageWrapper>
+
+      </MainPageWrapper>
+
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/shop' element={<Shop/>} />
