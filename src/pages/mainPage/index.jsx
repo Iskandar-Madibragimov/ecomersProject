@@ -11,10 +11,12 @@ import { DealsWrapper } from '../../components/deals/style'
 import Deals from '../../components/deals'
 import Newsletter from '../../components/newsletter'
 import Offers from '../../components/offers'
+import Pros from '../../components/pros'
+import TopProducts from '../../components/topProducts'
 
 function MainPage() {
   return (
-    <div>
+    <MainPageWrapper>
     <Navbar />
 
       <ul>
@@ -34,6 +36,7 @@ function MainPage() {
 
       <MainPageWrapper>
         <Offers />
+        <TopProducts />
         <Deals />
         <Newsletter />
       </MainPageWrapper>
@@ -44,8 +47,9 @@ function MainPage() {
         <Route path='/blog' element={<Blog/>} />
         <Route path='/contact-us' element={<Contact/>} />
       </Routes>
+      <Pros />
       <Footer />
-    </div>
+    </MainPageWrapper>
   )
 }
 

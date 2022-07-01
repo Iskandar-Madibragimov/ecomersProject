@@ -1,11 +1,16 @@
-import React from 'react'
-import { Bottom, Middle, NavbarWrapper, Option, Options, Search, Top } from './style'
-import Logo from "../../assets/img/Ghostlogo.webp"
-import { Routes, Route, Link } from 'react-router-dom'
-import Home from "../../pages/home"
-import Blog from "../../pages/blog"
-import Shop from "../../pages/shop"
-import Contact from "../../pages/contactUs"
+import React from "react";
+import {
+  Bottom,
+  Middle,
+  NavbarWrapper,
+  Option,
+  Options,
+  Search,
+  Top,
+} from "./style";
+import Logo from "../../assets/img/Ghostlogo.webp";
+import user from "../../assets/icons/user.svg";
+import search from "../../assets/icons/search.svg";
 
 function Navbar() {
   return (
@@ -32,50 +37,41 @@ function Navbar() {
             <option value="">All Categories</option>
             <option value="">All Categories</option>
           </select>
-          <input type="text" placeholder='Search for Products...' />
-          <button>🔍</button>
-
+          <input type="text" placeholder="Search for Products..." />
+          <button><img src={search} alt="" /></button>
         </Search>
-          <Options>
-            <Option>
+        <Options>
+          <Option>
+            <div className="img">
+              <img src={user} alt="" />
+            </div>
+            <div>
               <p>login</p>
-              <h3>My Account</h3>
-            </Option>
-            <Option>
-              <p>login</p>
-              <h3>My Account</h3>
-            </Option>
-            <Option>
-              <p>login</p>
-              <h3>My Account</h3>
-            </Option>
-          </Options>
+              <p className="color">My Account</p>
+            </div>
+          </Option>
+          <Option>
+            <div className="img">
+              <img src={user} alt="" />
+            </div>
+            <div>
+              <p>Favorite</p>
+              <p className="color">My Wishlist</p>
+            </div>
+          </Option>
+          <Option>
+            <div className="img">
+              <img src={user} alt="" />
+            </div>
+            <div>
+              <p>Your Cart</p>
+              <p className="color">$0.00</p>
+            </div>
+          </Option>
+        </Options>
       </Middle>
-      <Bottom>
-      {/* <ul>
-        <li>
-          <Link to={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"/shop"}>Shop</Link>
-        </li>
-        <li>
-          <Link to={"/blog"}>Blog</Link>
-        </li>
-        <li>
-          <Link to={"/contactUs"}>Contact Us</Link>
-        </li>
-      </ul>
-
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/shop' element={<Shop/>} />
-        <Route path='/blog' element={<Blog/>} />
-        <Route path='/contact-us' element={<Contact/>} />
-      </Routes> */}
-      </Bottom>
     </NavbarWrapper>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
