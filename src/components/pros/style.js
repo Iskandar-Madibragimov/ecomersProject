@@ -22,8 +22,8 @@ export const Pro = styled.div`
         margin: 8px 0;
     }
 
-    img{
-        fill: white;
+    svg{
+        color: white;
     }
 `
 export const Line = styled.div`

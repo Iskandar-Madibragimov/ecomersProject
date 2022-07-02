@@ -34,12 +34,6 @@ function MainPage() {
         </li>
       </ul>
 
-      <MainPageWrapper>
-        <Offers />
-        <TopProducts />
-        <Deals />
-        <Newsletter />
-      </MainPageWrapper>
 
       <Routes>
         <Route path='/' element={<Home/>} />

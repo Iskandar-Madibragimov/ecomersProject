@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import BackgroundImg from "../../assets/img/newsletter.webp";
+
 
 export const NewsletterWrapper = styled.div`
-  position: relative;
+  /* position: relative; */
+  background-image: url(${BackgroundImg});
+  background-size: cover;
+  background-position: center;
   .color,
   .font {
     color: #95ae00;
@@ -9,13 +14,17 @@ export const NewsletterWrapper = styled.div`
     font-size: 14px;
     font-weight: 600;
   }
+
+  
 `;
 
 export const NewsletterInfo = styled.div`
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
-  bottom: 110px;
-  left: 485px;
+  margin: auto;
+  padding: 55px 0;
+  /* bottom: 110px;
+  left: 485px; */
   width: fit-content;
 
   p,
@@ -41,8 +50,8 @@ export const NewsActions = styled.div`
   button {
     width: 140px;
     background-color: #95ae00;
-    position: absolute;
-    right: 0px;
+    /* position: absolute; */
+    /* right: 0px; */
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
