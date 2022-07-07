@@ -12,22 +12,48 @@ export const OffersCard = styled.div`
   position: relative;
   color: white;
   width: 28vw;
+  padding: 50px 30px;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
 
-  p {
+  :hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    transition: 0.5s;
+  }
+`;
+
+export const Info = styled.div`
+  z-index: 2;
+  p {
     font-size: 20px;
-    left: 30px;
   }
 
   h2 {
-    position: absolute;
-    left: 30px;
-    bottom: 100px;
+    /* position: relative;
+    z-index: 2; */
+    /* left: 30px; */
+    /* bottom: 100px; */
     width: 180px;
   }
 
   .when {
-    bottom: 190px;
+    /* bottom: 190px; */
     text-transform: uppercase;
     letter-spacing: 0px;
     font-size: 14px;
@@ -35,22 +61,7 @@ export const OffersCard = styled.div`
     font-weight: 500;
   }
   .buy {
-    bottom: 40px;
+    /* bottom: 40px; */
     cursor: pointer;
-  }
-
-  img {
-    :hover{
-    }
-}
-
-  div {
-    transition: 0.5s;
-    position: absolute;
-    width: 150px;
-    height: 1px;
-    background-color: white;
-    left: 30px;
-    bottom: 35px;
   }
 `;
