@@ -11,18 +11,26 @@ export const Options = styled.div`
 
   ul {
     display: flex;
+    transition: 0.5s;
     list-style-type: none;
-    list-style-type: none;
-    text-decoration: none;
-
     li {
       padding: 0 25px;
-      color: #09432b;
       text-transform: uppercase;
+      font-weight: bold;
+
+      a {
+        color: #09432b;
+        text-decoration: none;
+        transition: 0.5s;
+
+        :hover {
+          color: #95ae00;
+        }
+      }
     }
   }
 
-  .shipping{
+  .shipping {
     color: red;
   }
 `;

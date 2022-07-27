@@ -12,7 +12,7 @@ function Blog() {
   return (
     <FlashWrapper>
       <Top>
-        <h1>Top Selling Products</h1>
+        <h1>From The Blog</h1>
         <Line></Line>
         <div className="buttons">
           <button

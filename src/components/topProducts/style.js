@@ -7,16 +7,93 @@ export const ParentWrapper = styled.div`
 
 export const Text = styled.div`
   padding-top: 20px;
-`
+  width: calc( 100% - 163px);
+`;
 
+export const ButtonWrapper = styled.div`
+  transition: 0.5s;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  padding: 20px;
+  z-index: 2;
+  button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #95ae00;
+    color: white;
+    cursor: pointer;
+  }
+`;
+
+export const Icon = styled.div`
+  position: relative;
+  width: 163px;
+  height: 163px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const ActionWrapper = styled.div`
+  position: absolute;
+  background-color: transparent !important;
+  display: flex;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+`;
+
+export const ActionIcon = styled.div`
+  cursor: pointer;
+  transition: 0.5s;
+  width: 40px;
+  height: 40px;
+  /* background-color: white; */
+  border-radius: 50%;
+  margin: 0 5px;
+  transform: translateY(40px);
+  opacity: 0;
+  svg{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    padding: 10px;
+    margin: auto;
+    border-radius: 50%;
+    transition: 0.5s;
+    /* stroke: yellow; */
+
+
+  }
+  :hover {
+    svg{
+
+      background-color: #95ae00;
+      stroke: white;
+      /* fill: white; */
+      /* padding:10px; */
+    }
+  }
+  
+`;
 
 export const Parent = styled.div`
   display: grid;
   grid-gap: 20px;
-  /* grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; */
 
   grid-template-areas:
     "item1 item1 item2"
@@ -36,8 +113,19 @@ export const Parent = styled.div`
     grid-area: item1;
     display: flex;
 
+    :hover {
+      .action-icon {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .button-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
     button {
-      width: 512px;
+      width: 70%;
       background-color: #95ae00;
       color: #fff;
       height: 40px;
@@ -62,15 +150,27 @@ export const Parent = styled.div`
     }
   }
   .other {
+    position: relative;
     height: 163px;
+    :hover {
+      .action-icon {
+        /* transform: translateY(0px); */
+        opacity: 1;
+      }
+      .button-wrapper {
+        /* transform: translateY(0);  */
+        opacity: 1;
+        bottom: -55px;
+      }
+    }
 
-    .flex{
+    .flex {
       display: flex;
 
-      h3{
+      h3 {
         color: #95ae00;
       }
-      del{
+      del {
         margin-left: 10px;
         color: #888;
       }
@@ -80,12 +180,33 @@ export const Parent = styled.div`
     grid-area: item2;
     display: flex;
     /* background-color: red; */
+    :hover {
+      .action-icon {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .button-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .icon1 {
+      transition-delay: 0s;
+    }
+    .icon2 {
+      transition-delay: 0.1s;
+    }
+    .icon3 {
+      transition-delay: 0.2s;
+    }   
+
     h4 {
       color: #0062bd;
     }
 
     img {
-      width: 40%;
+      /* width: 40%; */
       object-fit: cover;
     }
   }
@@ -93,11 +214,34 @@ export const Parent = styled.div`
     grid-area: item3;
     display: flex;
     /* background-color: red; */
+
+    :hover {
+      .action-icon {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .button-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .icon1 {
+      transition-delay: 0s;
+    }
+    .icon2 {
+      transition-delay: 0.1s;
+    }
+    .icon3 {
+      transition-delay: 0.2s;
+    }
+
     h4 {
       color: #0062bd;
     }
 
     img {
+      position: relative;
       width: 40%;
       object-fit: cover;
     }
@@ -106,6 +250,17 @@ export const Parent = styled.div`
     grid-area: item4;
     display: flex;
     /* background-color: red; */
+    :hover {
+      .action-icon {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .button-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
     h4 {
       color: #0062bd;
     }
@@ -119,6 +274,16 @@ export const Parent = styled.div`
     grid-area: item5;
     display: flex;
     /* background-color: red; */
+    :hover {
+      .action-icon {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .button-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
     h4 {
       color: #0062bd;
     }
@@ -132,6 +297,16 @@ export const Parent = styled.div`
     grid-area: item6;
     display: flex;
     /* background-color: red; */
+    :hover {
+      .action-icon {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .button-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
     h4 {
       color: #0062bd;
     }

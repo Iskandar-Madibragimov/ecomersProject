@@ -1,60 +1,20 @@
 import styled, { keyframes } from "styled-components";
 
-export const FlashWrapper = styled.div`
-  width: 90vw;
-  margin: auto;
-`;
-export const Top = styled.div`
-  display: flex;
-  width: 90vw;
-  margin: auto;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
-  align-items: center;
 
-  .timer {
-    display: flex;
-    align-items: center;
-    height: fit-content;
-    padding: 10px 20px;
-    color: white;
-    background-color: red;
-    border-radius: 50px;
-    
+export const FilterIcon = styled.div`
+  padding: 5px;
 
-    p {
-    }
-
-    #demo {
-    }
-  }
-
-  h1 {
-    color: #09432b;
-  }
-
-  .buttons {
-    width: 100px;
-    justify-content: space-between;
-  }
-
-  button {
-    margin: 0 2px;
-    border-radius: 50%;
-    border: 1px solid #dde3e9;
-    padding: 4px;
+  svg{
+    color: ${({active}) =>active? "black" : "lightgray"};
     cursor: pointer;
-  }
-`;
-export const Line = styled.div`
-  width: 800px;
-  height: 1px;
-  background-color: #dde3e9;
-`;
+}
+`
+
+
 
 export const Product = styled.div`
   position: relative;
-  width: 280px;
+  width: 18vw;
   padding: 10px;
   border: 10px solid transparent;
   overflow: visible;
@@ -108,8 +68,8 @@ export const ActionWrapper = styled.div`
 export const ActionIcon = styled.div`
   cursor: pointer;
   transition: 0.5s;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   border-radius: 50%;
   margin: 0 5px;
@@ -118,16 +78,14 @@ export const ActionIcon = styled.div`
   img{
     /* width: 70%; */
     padding:10px;
+    stroke: white;
     margin: auto;
-    border-radius: 50%;
-    transition: 0.5s;
+  }
 
-    :hover{
+  :hover{
       background-color: #95ae00;
       /* stroke: white; */
     }
-
-  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -138,7 +96,7 @@ export const ButtonWrapper = styled.div`
   /* position: absolute; */
   /* bottom: 0; */
   transform: translateY(-75px);
-  padding: 20px; 
+  padding: 20px;
   button {
     width: 100%;
     padding: 10px;

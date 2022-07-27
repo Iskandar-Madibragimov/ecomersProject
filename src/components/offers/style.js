@@ -11,7 +11,7 @@ export const OffersWrapper = styled.div`
 export const OffersCard = styled.div`
   position: relative;
   color: white;
-  width: 28vw;
+  width: 29vw;
   padding: 50px 30px;
   z-index: 1;
   display: flex;

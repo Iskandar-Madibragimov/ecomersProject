@@ -86,6 +86,8 @@ export const Option = styled.div`
   /* margin: 0 10px; */
   width: fit-content;
   transform: translateX(-40px);
+  cursor: pointer;
+
 
   .img {
     transform: translateX(20px);
