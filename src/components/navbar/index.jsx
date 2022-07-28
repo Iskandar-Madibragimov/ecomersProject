@@ -14,6 +14,7 @@ import search from "../../assets/icons/search.svg";
 import { useState } from "react";
 import Login from "../login";
 import WishList from "../wishList";
+import Cart from "../cart";
 
 function Navbar() {
   const [loginPopUp, setLoginPopUp] = useState(false);
@@ -77,7 +78,11 @@ function Navbar() {
                 <p className="color">My Wishlist</p>
               </div>
             </Option>
-            <Option>
+            <Option
+              onClick={() => {
+                setCartPopUp(true);
+              }}
+            >
               <div className="img">
                 <img src={user} alt="" />
               </div>
@@ -91,6 +96,7 @@ function Navbar() {
       </NavbarWrapper>
       {loginPopUp && <Login setPopUp={setLoginPopUp} />}
       {wishListPopUp && <WishList setPopUp={setwishListPopUp} />}
+      {cartPopUp && <Cart setPopUp={setCartPopUp} />}
     </>
   );
 }

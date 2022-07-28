@@ -117,8 +117,7 @@ function Shop() {
             )
           )}
       </FlashWrapper>
-      {sideFilter ? <Filter /> : ""}
-      {<Cart />}
+      {sideFilter ?  <Filter setPopUp={setSideFilter}/> : ""}
     </>
   );
 }

@@ -9,7 +9,9 @@ function WishList() {
       <Card>
         <Title>
           <h3>WISHLIST</h3>
-          <LeaveWishList>
+          <LeaveWishList
+          
+          >
             <X />
           </LeaveWishList>
         </Title>

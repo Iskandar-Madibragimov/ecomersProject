@@ -1,20 +1,29 @@
 import React from "react";
 import {
+  BackGround,
   Brands,
   Category,
   CateList,
   Filters,
   FilterWrapper,
   LeaveFilter,
+  LeftSide,
 } from "./style";
 import { ReactComponent as X } from "../../assets/icons/x.svg";
 
-function Filter() {
+function Filter({ setPopUp }) {
   return (
     <FilterWrapper>
+      <BackGround />
+      <LeftSide>
+        
       <Filters>
         <p>FILTERS</p>
-        <LeaveFilter>
+        <LeaveFilter
+          onClick={() => {
+            setPopUp(false);
+          }}
+        >
           <X />
         </LeaveFilter>
       </Filters>
@@ -53,6 +62,7 @@ function Filter() {
         <h5>FILTER BY SIZE</h5>
         <p>There are no tags</p>
       </Brands>
+      </LeftSide>
     </FilterWrapper>
   );
 }

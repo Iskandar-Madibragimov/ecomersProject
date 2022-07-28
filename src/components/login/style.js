@@ -63,6 +63,7 @@ export const LoginOpt = styled.div`
     padding: 10px;
   }
   form {
+    padding: 20px 0;
     p {
       color: #6b6b6b;
     }
@@ -79,6 +80,7 @@ export const LoginOpt = styled.div`
       border: none;
       color: white;
       transition: 0.5s;
+      margin-top: 10px;
 
       :hover {
         background-color: #95ae00;
@@ -96,6 +98,20 @@ export const LoginOpt = styled.div`
 export const Flex = styled.div`
   display: flex;
   justify-content: space-between;
+  height: 50px;
+  align-items: center;
+
+  /* input{
+    height: 20px;
+    width: 20px;
+  } */
+
+
+  #check{
+
+    height: 20px;
+    width: 20px;
+  }
 `;
 export const New = styled.div`
   p {
@@ -104,6 +120,7 @@ export const New = styled.div`
   button {
     border: 1px solid #09432b;
     color: #09432b;
+    background-color: #fff;
     transition: 0.5s;
 
     :hover {

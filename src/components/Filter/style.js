@@ -1,5 +1,20 @@
 import styled from "styled-components";
 
+export const LeftSide = styled.div`
+`
+
+export const BackGround = styled.div`
+background-color: rgba(0, 0, 0, 0.5);
+  width: calc(100vw - 316px);
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+`
+
+
 export const FilterWrapper = styled.div`
   position: fixed;
   height: 100vh;
@@ -8,7 +23,7 @@ export const FilterWrapper = styled.div`
   left: 0;
   bottom: 0;
   background-color: white;
-  overflow: scroll;
+  overflow: auto;
 
   .price {
     margin-top: 60px;
@@ -51,8 +66,17 @@ export const Category = styled.div`
 export const CateList = styled.div`
   height: 315px;
   width: 100%;
-  /* background-color: yellow; */
-  overflow: scroll;
+  overflow: auto;
+  ::-webkit-scrollbar{
+    /* display: none; */
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: lightgray;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: black;
+  }
 
   p {
     padding: 12px 20px;
