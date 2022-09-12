@@ -3,11 +3,19 @@ import styled from "styled-components";
 export const MainPageWrapper = styled.div``;
 
 export const Options = styled.div`
+  
+  position: ${({active}) => {
+    return active ? "sticky" : "relative"
+  }};
+  top: 0;
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  width: 100vw;
+  margin: 0 100px;
   margin: auto;
   padding: 15px;
+  background-color: #fff !important;
+  z-index: 1;
 
   ul {
     display: flex;

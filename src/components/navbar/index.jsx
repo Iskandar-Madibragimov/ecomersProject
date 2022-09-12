@@ -24,7 +24,8 @@ function Navbar() {
   return (
     <>
       <NavbarWrapper>
-        <Top>
+        <Top
+        >
           <p>Welcome to Gosto Online Shopping Store !</p>
           <ul>
             <li>Need help call us: (+88) - 1990 - 6886</li>

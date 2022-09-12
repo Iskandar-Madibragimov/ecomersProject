@@ -10,8 +10,6 @@ export const FilterIcon = styled.div`
 }
 `
 
-
-
 export const Product = styled.div`
   position: relative;
   width: 18vw;

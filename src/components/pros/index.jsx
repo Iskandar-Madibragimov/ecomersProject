@@ -35,14 +35,14 @@ function Pros() {
     <ProsWrapper>
       <ProsContainer>
         {prosImg.map(({ img, title, desc }, index) => (
-          <>
+          <React.Fragment key={index}>
             <Pro>
               {img}
               <h5>{title}</h5>
               <p>{desc}</p>
             </Pro>
             {index == prosImg.length - 1 ? "" : <Line />}
-          </>
+          </React.Fragment>
         ))}
       </ProsContainer>
     </ProsWrapper>

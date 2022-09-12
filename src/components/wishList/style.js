@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BackGround = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   width: calc(100vw - 439px);
   height: 100vh;
   position: fixed;
@@ -13,7 +13,23 @@ export const BackGround = styled.div`
 export const Card = styled.div`
   z-index: 1001 !important;
   background-color: #fff !important;
+  margin-bottom: 10px;
+  text-align: center;
 
+  button{
+    margin-top: 20px;
+    width: 350px;
+    height: 50px;
+    background-color: #09432b;
+    transition: .5s;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    :hover{
+      background-color: #95ae00;
+    }
+  }
 `
 export const LeaveWishList = styled.div`
 
@@ -28,6 +44,7 @@ export const WishListWrapper = styled.div`
   right: 0;
   bottom: 0;
   z-index: 1001;
+  overflow: auto;
 
 `;
 
@@ -55,8 +72,29 @@ export const List = styled.div`
   /* background-color: #fff; */
   width: fit-content;
   margin: auto;
-  margin-top: 70px;
+  /* margin-top: 70px; */
   p {
     color: #6b6b6b;
   }
 `;
+
+export const Wish = styled.div`
+  /* background-color: red; */
+  display: flex;
+  padding: 20px;
+`
+
+export const Img = styled.div`
+  img{
+    width: 80px;
+    height: 80px;
+  }
+`
+export const Info = styled.div`
+  padding: 0 20px;
+
+  .price{
+    margin-top: 25px;
+  }
+`
+export const DeleteWish = styled.div``

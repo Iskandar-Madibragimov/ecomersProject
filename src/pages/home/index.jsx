@@ -23,6 +23,7 @@ function Home() {
       <Recommended />
       <Newsletter />
       <Blog /> 
+      
     </HomePageWrapper>
   );
 }

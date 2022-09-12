@@ -47,8 +47,9 @@ export const Search = styled.div`
   select,
   input {
     height: 45px;
-    border: none;
+    border: none !important;
   }
+
 
   input {
     width: 350px;
@@ -61,6 +62,7 @@ export const Search = styled.div`
     padding: 0 10px;
     color: #09432b;
     outline: none;
+    border: none !important;
   }
 
   button {

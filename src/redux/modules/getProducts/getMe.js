@@ -1,0 +1,4 @@
+const getMe = () => ({
+    action,
+    payload,
+})

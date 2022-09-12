@@ -15,12 +15,20 @@ import productImg from "../../assets/img/flash products.webp";
 import search from "../../assets/icons/searchh.svg";
 import layers from "../../assets/icons/layers.svg";
 import heart from "../../assets/icons/heart.svg";
-
-function Small({ img, title, review, price, discount, sold, stock }) {
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../redux/modules/getProducts/getProductsAction";
+import { useEffect } from "react";
+import {addToCart} from "../../utils/addToCart"
+function Small({img, title, review, price, sold, stock, id}) {
   return (
     <Product>
+      {/* <div>{title}</div> */}
       <ImgWrapper>
-        <img src={img} alt="" />
+        <Link to={`/product/${id}`}>
+          <img src={img} alt="" />
+        </Link>
+
         <ActionWrapper>
           <ActionIcon className="action-icon icon1">
             <img src={search} alt="" />
@@ -34,7 +42,9 @@ function Small({ img, title, review, price, discount, sold, stock }) {
         </ActionWrapper>
       </ImgWrapper>
       <Info>
-        <p className="title">{title}</p>
+        <Link className="title" to={`/product/${id}`}>
+          {title}
+        </Link>
         <p>
           {review.stars} {review.amount} Reviews
         </p>
@@ -45,7 +55,9 @@ function Small({ img, title, review, price, discount, sold, stock }) {
         </div>
       </Info>
       <ButtonWrapper className="button-wrapper">
-        <button>Add to cart</button>
+        <button onClick={() => {
+          addToCart(id)
+        }}>Add to cart</button>
       </ButtonWrapper>
     </Product>
   );

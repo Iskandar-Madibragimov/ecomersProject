@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { carousel2 as products } from "../../mock.js";
+import React, { useEffect, useState } from "react";
+// import { carousel2 as products } from "../../mock.js";
 import {
   ActionWrapper,
   FlashWrapper,
@@ -18,24 +18,47 @@ import { ReactComponent as Grid3 } from "../../assets/icons/align-justify.svg";
 import Small from "../../components/viewSmallType/index.jsx";
 import Lists from "../../components/lists/index.jsx";
 import Big from "../../components/Big/index.jsx";
-import { FilterWrapper } from "../../components/Filter/style.js";
 import Filter from "../../components/Filter/index.jsx";
-import WishList from "../../components/wishList/index.jsx";
-import Cart from "../../components/cart/index.jsx";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../redux/modules/getProducts/getProductsAction";
+// import { useEffect } from "react";
 function Shop() {
   const [viewType, setViewType] = useState("small");
   const [filter, setFilter] = useState("price:low to high");
   const [sideFilter, setSideFilter] = useState(false);
+  // const [category, setCategory] = useState("");
+  // const [price, setPrice] = useState("");
+  const [filterInfo, setFilterInfo] = useState({
+    price: {},
+    brand: "",
+    category: "",
+    size: null,
+    color: "",
+  });
+  const products = useSelector((state) => state.products);
+
+  useEffect(() => {
+    // console.log(products);
+  }, [products]);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
 
   return (
     <>
       <Top>
         <div>
-          <button onClick={
-            () => {
-              setSideFilter(true)
-            }
-          }>Filter</button>
+          <button
+            onClick={() => {
+              setSideFilter(true);
+            }}
+          >
+            Filter
+          </button>
           <FilterIcon
             active={viewType === "big"}
             onClick={() => {
@@ -83,7 +106,37 @@ function Shop() {
       </Top>
 
       <FlashWrapper>
-        {products
+        {products.data?.filter(({ category: c }) => {
+            return (
+              filterInfo.category === "all" ||
+              filterInfo.category === "" ||
+              c === filterInfo.category
+            );
+          })
+          .filter(({ brand }) => {
+            return filterInfo.brand === brand || filterInfo.brand === "";
+            // ? true
+            // : false;
+          })
+          .filter(({ color }) => {
+            return filterInfo.color === color || filterInfo.color === "";
+            // ? true
+            // : false;
+          })
+          .filter(({ price }) => {
+            return (
+              (filterInfo.price.min <= price &&
+                filterInfo.price.max >= price) ||
+              JSON.stringify(filterInfo.price) === JSON.stringify({})
+            );
+            // ? true
+            // : false;
+          })
+          .filter(({ size }) => {
+            return filterInfo.size === size || filterInfo.size === null;
+            // ? true
+            // : false;
+          })
           .sort((a, b) => {
             if (filter === "price:low to high") {
               return a.price - b.price;
@@ -107,17 +160,25 @@ function Shop() {
           })
           .map((value, index) =>
             viewType === "small" ? (
-              <Small key={index} {...value} />
+              <Small key={index} {...value}   />
             ) : viewType === "big" ? (
-              <Big key={index} {...value} />
+              <Big key={index} {...value}/>
             ) : viewType === "list" ? (
-              <Lists key={index} {...value} />
+              <Lists key={index} {...value}/>
             ) : (
               ""
             )
           )}
       </FlashWrapper>
-      {sideFilter ?  <Filter setPopUp={setSideFilter}/> : ""}
+      {sideFilter ? (
+        <Filter
+          setPopUp={setSideFilter}
+          filterInfo={filterInfo}
+          setFilterInfo={setFilterInfo}
+        />
+      ) : (
+        ""
+      )}
     </>
   );
 }

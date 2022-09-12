@@ -7,35 +7,6 @@ export const Top = styled.div`
   display: flex;
   justify-content: space-between;
 
-  /* #sidebar{
-    position:fixed;
-    width:30%;
-    height:100%;
-    background-color: black;
-    
-  }
-
-  #sidebar li{
-    color:white;
-    font-size:30px;
-    padding:30px;
-    border-bottom:1px solid gray;
-    text-align:center;
-  }
-
-  .toggle{
-    position:absolute;
-    left:105%;
-    top:15px;
-  }
-
-  .toggle span{
-    display:block;
-    background-color: red;
-    width:30px;
-    height:5px;
-  } */
-
   div {
     display: flex;
   }
@@ -70,7 +41,6 @@ export const FlashWrapper = styled.div`
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  /* margin:auto; */
 `;
 export const Topp = styled.div`
   display: flex;

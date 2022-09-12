@@ -4,28 +4,78 @@ import {
   Buttons,
   CartWrapper,
   Deal,
+  DeleteWish,
+  Img,
+  Info,
   InsideCart,
+  LeaveCart,
   Price,
   RightSide,
   Title,
   Total,
+  Wish,
 } from "./style";
 import { ReactComponent as X } from "../../assets/icons/x.svg";
 import { ReactComponent as Frown } from "../../assets/icons/frown.svg";
+import { carousel2 as carousel2 } from "../../mock.js";
 
-function Cart() {
+function Cart({ setPopUp }) {
+  let amount = 1;
+
   return (
     <CartWrapper>
-        <BackGround />
+      <BackGround />
       <RightSide>
         <Title>
           <p>Shopping Cart</p>
-          <X />
+          <LeaveCart
+            onClick={() => {
+              setPopUp(false);
+            }}
+          >
+            <X />
+          </LeaveCart>
         </Title>
         <InsideCart>
-          <Frown />
-          <p>Your Cart is empty</p>
-          <button>Return to shop</button>
+          {carousel2.length === 0 && (
+            <>
+              <Frown />
+              <p>Your Cart is empty</p>
+              <button>Return to shop</button>
+            </>
+          )}
+
+          {carousel2.map(({ img, title, price }) => (
+            <Wish>
+              <Img>
+                <img src={img} alt="" />
+              </Img>
+
+              <Info>
+                <div>
+                  <p>{title}</p>
+                  <DeleteWish>
+                    <X />
+                  </DeleteWish>
+                </div>
+                <div>
+                  <p>1x</p>
+                  <p className="price">${price}</p>
+                  <div>
+                    <p
+                      onClick={() => {
+                        return amount--;
+                      }}
+                    >
+                      -
+                    </p>
+                    <p>{amount}</p>
+                    <p>+</p>
+                  </div>
+                </div>
+              </Info>
+            </Wish>
+          ))}
         </InsideCart>
         <Total>
           <Price>

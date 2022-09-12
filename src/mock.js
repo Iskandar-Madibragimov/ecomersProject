@@ -83,33 +83,37 @@ export const products = [
     title: "Happy Baby Organics Teether, 3 Flavor Variety Pack",
     review: "*****",
     price: "$345.00",
+    category: "",
   },
   {
     img: "",
     title: "Happy Baby Organics Teether, 3 Flavor Variety Pack",
     review: "*****",
     price: "$345.00",
+    category: "",
   },
   {
     img: "",
     title: "Happy Baby Organics Teether, 3 Flavor Variety Pack",
     review: "*****",
     price: "$345.00",
+    category: "",
   },
   {
     img: "",
     title: "Happy Baby Organics Teether, 3 Flavor Variety Pack",
     review: "*****",
     price: "$345.00",
+    category: "",
   },
   {
     img: "",
     title: "Happy Baby Organics Teether, 3 Flavor Variety Pack",
     review: "*****",
     price: "$345.00",
+    category: "",
   },
 ];
-
 
 export const carousel2 = [
   {
@@ -124,6 +128,10 @@ export const carousel2 = [
     sold: 50,
     stock: 50,
     hot: false,
+    category: "accessories",
+    color: "red",
+    brand: "Nike",
+    size: 20,
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/2_975bcf60-ca81-4a6c-b472-97010b523f07_360x.jpg?v=1637809374",
@@ -137,6 +145,10 @@ export const carousel2 = [
     sold: 21,
     stock: 79,
     hot: false,
+    category: "decor",
+    color: "orange",
+    brand: "Nike",
+    size: 30,
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/3_ccdd8852-0531-48a0-a995-8ce4ed043578_360x.jpg?v=1637809518",
@@ -150,6 +162,10 @@ export const carousel2 = [
     sold: 74,
     stock: 26,
     hot: false,
+    category: "decor&lighting",
+    color: "yellow",
+    brand: "Puma",
+    size: 42,
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/4_488377ea-3810-4f6b-8309-798b43ff0371_360x.jpg?v=1637810805",
@@ -163,6 +179,10 @@ export const carousel2 = [
     sold: 74,
     stock: 26,
     hot: true,
+    category: "dining&kitchen",
+    color: "green",
+    brand: "Puma",
+    size: 41,
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/5_6c459978-ac60-4437-b4d7-ccd558643e43_360x.jpg?v=1637811736",
@@ -176,6 +196,10 @@ export const carousel2 = [
     sold: 57,
     stock: 43,
     hot: true,
+    category: "office-furniture",
+    color: "blue",
+    brand: "Adidas",
+    size: 43,
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/6_0b284d86-fc9a-4284-a012-466c68ffaf66_360x.jpg?v=1637811827",
@@ -189,6 +213,10 @@ export const carousel2 = [
     sold: 85,
     stock: 15,
     hot: true,
+    category: "outdoor&gift",
+    color: "indigo",
+    brand: "Ever Green",
+    size: 50,
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/7_8d2f1e01-b37f-4d17-bc6e-ae5e03847144_360x.jpg?v=1637811826",
@@ -202,6 +230,27 @@ export const carousel2 = [
     sold: 18,
     stock: 82,
     hot: true,
+    category: "sectional-sofas",
+    color: "violet",
+    brand: "Nike",
+    size: 30,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0593/9488/3760/products/7_8d2f1e01-b37f-4d17-bc6e-ae5e03847144_360x.jpg?v=1637811826",
+    title: "Happy Baby Organics Teether, 3  Flavor Variety Pack",
+    review: {
+      stars: 5,
+      amount: 0,
+    },
+    price: 45.0,
+    discount: 10,
+    sold: 18,
+    stock: 82,
+    hot: true,
+    category: "tables&chair",
+    color: "yellow",
+    brand: "Nike",
+    size: 40,
   },
 ];
 
@@ -501,4 +550,15 @@ export const shopCards = [
     stock: 82,
     hot: true,
   },
+];
+
+export const colors = [
+  { color: "red" },
+  { color: "orange" },
+  { color: "yellow" },
+  { color: "green" },
+  { color: "blue" },
+  { color: "indigo" },
+  { color: "violet" },
+  { color: "black" },
 ];

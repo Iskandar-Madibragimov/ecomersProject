@@ -40,8 +40,10 @@ function Login({ setPopUp }) {
             <p>Password</p>
             <input type="text" name="" id="" placeholder="Password" />
             <Flex>
+              {/* <div> */}
               <input type="checkbox" name="" id="check" />
               <label htmlFor="check">Remember me</label>
+              {/* </div> */}
               <p>Forgot Your Password?</p>
             </Flex>
             <button>Login</button>
@@ -56,7 +58,7 @@ function Login({ setPopUp }) {
           </form>
         ) : (
           <form>
-            <p>First Name</p>
+            <p>Fir  st Name</p>
             <input type="text" name="" id="" placeholder="First Name" />
             <p>Last Name</p>
             <input type="text" name="" id="" placeholder="Last Name" />

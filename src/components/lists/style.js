@@ -1,5 +1,11 @@
 import styled, { keyframes } from "styled-components";
 
+export const WrapWrapper = styled.div`
+
+background-color: #f3f6f1;
+`
+
+
 export const Flex = styled.div`
   margin-top:40px;
 `;
@@ -7,7 +13,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 90vw;
-  background-color: #858585;
 `;
 
 export const Product = styled.div`
@@ -17,7 +22,7 @@ export const Product = styled.div`
   background-color: #fff;
   padding: 10px;
   border: 10px solid transparent;
-  margin: 10px;
+  margin: 10px; 
   /* overflow: visible; */
 `;
 

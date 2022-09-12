@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
 export const TabsWrapper = styled.div`
   display: flex;
-  /* justify-content: space-evenly; */
+  
 `;
 export const Tab = styled.div`
   width: 50%;
@@ -31,7 +31,7 @@ export const LeaveLogin = styled.div`
 `;
 
 export const BackGround = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -99,12 +99,15 @@ export const Flex = styled.div`
   display: flex;
   justify-content: space-between;
   height: 50px;
-  align-items: center;
 
-  /* input{
-    height: 20px;
-    width: 20px;
-  } */
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  /* justify-content: space-evenly; */
+
+  label{
+    margin-right:30px;
+  }
 
 
   #check{
